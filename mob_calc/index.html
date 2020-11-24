@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <script src="js/scripts.js">
+  	</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>RWD Calc</title>
+  </head>
+  <body>
+    <div class="w3-container widget w3-blue-grey" id="calc" onresize="MatchContent()">
+      <div class="w3-container result_screen" >
+        <input id="PrevRes" class="w3-input w3-border" placeholder="Poprzednie działanie" type="text" disabled="true">
+        <input id="screen" class="w3-input w3-border" placeholder="aktualna liczba" type="text">
+      </div>
+      <div class="" id="keyboar">
+        <input type="button" class="calc-buttons w3-black exe" value="=" onClick="Execute()">
+        <input type="button" class="calc-buttons w3-black" value="CE" onClick="Clean('e')">
+  			<input type="button" class="calc-buttons w3-black" value="C" onClick="Clean('c')">
+  			<input type="button" class="calc-buttons w3-black" value="<X]" onClick="Clean('x')">
+        <input type="button" class="calc-buttons w3-black" value="1" onClick="GetNumber(1)">
+        <input type="button" class="calc-buttons w3-black" value="2" onClick="GetNumber(2)">
+        <input type="button" class="calc-buttons w3-black" value="3" onClick="GetNumber(3)">
+        <input type="button" class="calc-buttons w3-black" value="4" onClick="GetNumber(4)">
+  			<input type="button" class="calc-buttons w3-black" value="5" onClick="GetNumber(5)">
+  			<input type="button" class="calc-buttons w3-black" value="6" onClick="GetNumber(6)">
+        <input type="button" class="calc-buttons w3-black" value="7" onClick="GetNumber(7)">
+  			<input type="button" class="calc-buttons w3-black" value="8" onClick="GetNumber(8)">
+  			<input type="button" class="calc-buttons w3-black" value="9" onClick="GetNumber(9)">
+        <input type="button" class="calc-buttons w3-black" value="0" onClick="GetNumber(0)">
+        <input type="button" class="calc-buttons w3-black" value="+/-" onClick="ChangeSign()">
+        <input type="button" class="calc-buttons w3-black" value="%">
+			  <input type="button" class="calc-buttons w3-black" value="&plus;" onClick="GetOpe('+')">
+			  <input type="button" class="calc-buttons w3-black" value="-" onClick="GetOpe('-')">
+			  <input type="button" class="calc-buttons w3-black" value="*" onClick="GetOpe('*')">
+			  <input type="button" class="calc-buttons w3-black" value="/" onClick="GetOpe('/')">
+			  <input type="button" class="calc-buttons w3-black" value="," onClick="GetNumber(',')">
+  			<input type="button" class="calc-buttons w3-black" value="&Pi;" onClick="GetNumber('Pi')">
+			<input type="button" class="calc-buttons w3-black" value="1/x" onClick="OneArg('Reve')">
+			<input type="button" class="calc-buttons w3-black" value="x&sup2" onClick="GetOpe('^')">
+			<input type="button" class="calc-buttons w3-black" value="&radic;" onClick="OneArg('Sqrt')">
+      <input type="button" class="calc-buttons w3-black calc-buttons-l" value="Ctan()">
+      <input type="button" class="calc-buttons w3-black calc-buttons-l" value="Sin()" onClick="OneArg('Sin')">
+    <input type="button" class="calc-buttons w3-black calc-buttons-l" value="Cos()" onClick="OneArg('Cos')">
+    <input type="button" class="calc-buttons w3-black calc-buttons-l" value="Tan()" onClick="OneArg('Tan')">
+    <input type="button" class="calc-buttons w3-black calc-buttons-l" value="&#176;" onClick="OneArg('ToDeg')">
+      </div>
+
+    </div>
+  </body>
+
+</html>
